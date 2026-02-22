@@ -16,7 +16,7 @@
 
 </head>
 <body class="bg-[#f8fafcFF]">
-    <main class="container mx-auto py-5 px-3 md:px-0 md:py-15">
+    <main class="container mx-auto py-5 px-3 md:px-0 md:py-15 ">
         <!-- Job Tracker -->
         <section class="border-b border-gray-300 pb-8">
             <h2 class="text-[25px]  md:text-[32px] text-[#002C5C] font-bold">Job Application Tracker</h2>
@@ -50,95 +50,135 @@
                 <button onclick="showSection('rejected-div'); buttonColor('job-section-btn-3')" class="bg-white text-[#64748bFF] rounded  px-5 md:px-10 py-3 hover:cursor-pointer hover:bg-gray-100 border md:border border-gray-200 md:border-gray-100" id="job-section-btn-3">Rejected</button>
             </div>
             
-            <div class=" w-100% h-100 mt-4">
-                <div class="w-100% h-100  hidden space-y-3" id="all-div">
+            <div class=" w-100% h-full mt-4">
+                <div class="w-100% h-full  hidden space-y-3" id="all-div">
 
-                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100">
-                        <h3 class="text-[#002C5C] font-semibold text-xl">Mobile First Corp</h3>
-                        <p>React Native Developer</p>
-                        <p class="my-3">Remote • Full-time • $130,000 - $175,000</p>
+                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="1st-job">
+                        <div>
+                            <h3 class="text-[#002C5C] font-semibold text-xl">Mobile First Corp</h3>
+                            <p>React Native Developer</p>
+                            <p class="my-3">Remote • Full-time • $130,000 - $175,000</p>
 
-                        <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-1">NOT APPLIED</div>
-                        <p class="my-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                        <button onclick="interview('not-applied-1')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
-                        <button onclick="rejected('not-applied-1')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                            <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-1">NOT APPLIED</div>
+                            <p class="my-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            <button onclick="interview('not-applied-1')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
+                            <button onclick="rejected('not-applied-1')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                        </div>
+                        <div>
+                            <div onclick="deleteJob('1st-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
+                        </div>
                     </div>
 
-                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100">
-                        <h3 class="text-[#002C5C] font-semibold text-xl">Mobile First Corp</h3>
-                        <p>React Native Developer</p>
-                        <p class="my-3">Remote • Full-time • $130,000 - $175,000</p>
+                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="2nd-job">
+                        <div>
+                            <h3 class="text-[#002C5C] font-semibold text-xl">WebFlow Agency</h3>
+                            <p>Web Design & Developer</p>
+                            <p class="my-3">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
 
-                        <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-2">NOT APPLIED</div>
-                        <p class="my-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                        <button onclick="interview('not-applied-2')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
-                        <button onclick="rejected('not-applied-2')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                            <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-2">NOT APPLIED</div>
+                            <p class="my-2">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                            <button onclick="interview('not-applied-2')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
+                            <button onclick="rejected('not-applied-2')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                        </div>
+                        <div>
+                            <div onclick="deleteJob('2nd-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
+                        </div>
                     </div>
 
-                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100">
-                        <h3 class="text-[#002C5C] font-semibold text-xl">Mobile First Corp</h3>
-                        <p>React Native Developer</p>
-                        <p class="my-3">Remote • Full-time • $130,000 - $175,000</p>
+                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="3rd-job">
+                        <div>
+                            <h3 class="text-[#002C5C] font-semibold text-xl">DataViz Solutions</h3>
+                            <p>Data Visualization Specialist</p>
+                            <p class="my-3">Boston, MA • Full-time • $125,000 - $165,000</p>
 
-                        <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-3">NOT APPLIED</div>
-                        <p class="my-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                        <button onclick="interview('not-applied-3')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
-                        <button onclick="rejected('not-applied-3')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                            <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-3">NOT APPLIED</div>
+                            <p class="my-2"> Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                            <button onclick="interview('not-applied-3')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
+                            <button onclick="rejected('not-applied-3')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                        </div>
+                        <div>
+                            <div onclick="deleteJob('3rd-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
+                        </div>
                     </div>
 
-                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100">
-                        <h3 class="text-[#002C5C] font-semibold text-xl">Mobile First Corp</h3>
-                        <p>React Native Developer</p>
-                        <p class="my-3">Remote • Full-time • $130,000 - $175,000</p>
+                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="4th-job">
+                        <div>
+                            <h3 class="text-[#002C5C] font-semibold text-xl">CloudFirst Inc</h3>
+                            <p>Backend Developer</p>
+                            <p class="my-3">Seattle, WA • Full-time • $140,000 - $190,000</p>
 
-                        <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-4">NOT APPLIED</div>
-                        <p class="my-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                        <button onclick="interview('not-applied-4')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
-                        <button onclick="rejected('not-applied-4')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                            <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-4">NOT APPLIED</div>
+                            <p class="my-2">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                            <button onclick="interview('not-applied-4')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
+                            <button onclick="rejected('not-applied-4')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                        </div>
+                        <div>
+                            <div onclick="deleteJob('4th-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
+                        </div>
                     </div>
 
-                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100">
-                        <h3 class="text-[#002C5C] font-semibold text-xl">Mobile First Corp</h3>
-                        <p>React Native Developer</p>
-                        <p class="my-3">Remote • Full-time • $130,000 - $175,000</p>
+                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="5th-job">
+                        <div>
+                            <h3 class="text-[#002C5C] font-semibold text-xl">Innovation Labs</h3>
+                            <p>UI/UX Engineer</p>
+                            <p class="my-3">Austin, TX • Full-time • $110,000 - $150,000</p>
 
-                        <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-5">NOT APPLIED</div>
-                        <p class="my-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                        <button onclick="interview('not-applied-5')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
-                        <button onclick="rejected('not-applied-5')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                            <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-5">NOT APPLIED</div>
+                            <p class="my-2">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                            <button onclick="interview('not-applied-5')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
+                            <button onclick="rejected('not-applied-5')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                        </div>
+                        <div>
+                            <div onclick="deleteJob('5th-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
+                        </div>
                     </div>
 
-                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100">
-                        <h3 class="text-[#002C5C] font-semibold text-xl">Mobile First Corp</h3>
-                        <p>React Native Developer</p>
-                        <p class="my-3">Remote • Full-time • $130,000 - $175,000</p>
+                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="6th-job">
+                        <div>
+                            <h3 class="text-[#002C5C] font-semibold text-xl">MegaCorp Solutions</h3>
+                            <p>JavaScript Developer</p>
+                            <p class="my-3">New York, NY • Full-time • $130,000 - $170,00</p>
 
-                        <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-6">NOT APPLIED</div>
-                        <p class="my-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                        <button onclick="interview('not-applied-6')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
-                        <button onclick="rejected('not-applied-6')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                            <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-6">NOT APPLIED</div>
+                            <p class="my-2">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                            <button onclick="interview('not-applied-6')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
+                            <button onclick="rejected('not-applied-6')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                        </div>
+                        <div>
+                            <div onclick="deleteJob('6th-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
+                        </div>
                     </div>
 
-                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100">
-                        <h3 class="text-[#002C5C] font-semibold text-xl">Mobile First Corp</h3>
-                        <p>React Native Developer</p>
-                        <p class="my-3">Remote • Full-time • $130,000 - $175,000</p>
+                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between " id="7th-job">
+                        <div>
+                            <h3 class="text-[#002C5C] font-semibold text-xl">StartupXYZ</h3>
+                            <p>Full Stack Engineer</p>
+                            <p class="my-3">Remote • Full-time • $120,000 - $160,000</p>
 
-                        <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-7">NOT APPLIED</div>
-                        <p class="my-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                        <button onclick="interview('not-applied-7')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
-                        <button onclick="rejected('not-applied-7')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                            <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-7">NOT APPLIED</div>
+                            <p class="my-2">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                            <button onclick="interview('not-applied-7')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
+                            <button onclick="rejected('not-applied-7')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                        </div>
+                        <div>
+                            <div onclick="deleteJob('7th-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
+                        </div>
                     </div>
 
-                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100">
-                        <h3 class="text-[#002C5C] font-semibold text-xl">Mobile First Corp</h3>
-                        <p>React Native Developer</p>
-                        <p class="my-3">Remote • Full-time • $130,000 - $175,000</p>
+                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="8th-job">
+                        <div>
+                            <h3 class="text-[#002C5C] font-semibold text-xl">TechCorp Industries</h3>
+                            <p>Senior Frontend Developer</p>
+                            <p class="my-3">San Francisco, CA • Full-time • $130,000 - $175,000</p>
 
-                        <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-8">NOT APPLIED</div>
-                        <p class="my-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                        <button onclick="interview('not-applied-8')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
-                        <button onclick="rejected('not-applied-8')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                            <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-8">NOT APPLIED</div>
+                            <p class="my-2">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                            <button onclick="interview('not-applied-8')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
+                            <button onclick="rejected('not-applied-8')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                        </div>
+                        <div>
+                            <div onclick="deleteJob('8th-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
+                        </div>
                     </div>
 
                 </div>
@@ -148,7 +188,7 @@
                 <div class="w-100% h-100 bg-green-400 hidden" id="rejected-div"></div>
             </div>
         </section>
-
+        
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="index.js"></script>

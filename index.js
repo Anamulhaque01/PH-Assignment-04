@@ -86,6 +86,9 @@ function rejected(id) {
     selected.style.color = '#ef4444';
 }
 
-
+function deleteJob(id) {
+    const selected = document.getElementById(id);
+    selected.style.display = 'none';
+}
 
 
