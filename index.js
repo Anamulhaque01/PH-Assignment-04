@@ -7,6 +7,10 @@ const allDiv = document.querySelector("#all-div")
 const interviewDiv = document.querySelector("#interview-div")
 const rejectedDiv = document.querySelector("#rejected-div")
 
+let interviewElement = document.querySelector("#interview-number")
+
+let rejectedElement = document.querySelector("#rejected-number")
+
 
 
 allDiv.classList.remove("hidden")
@@ -40,14 +44,48 @@ function showSection(id) {
 
 function interview(id) {
     const selected = document.getElementById(id);
+    const interviewCountElement = document.getElementById('interview-number');
+    const rejectedCountElement = document.getElementById('rejected-number');
+
+    if (selected.innerText === 'INTERVIEW') {
+        return;
+    }
+
+    if (selected.innerText === 'REJECTED') {
+        let rejectedNumber = Number(rejectedCountElement.innerText);
+        if (rejectedNumber > 0) rejectedCountElement.innerText = rejectedNumber - 1;
+    }
+
+    let interviewNumber = Number(interviewCountElement.innerText);
+    interviewCountElement.innerText = interviewNumber + 1;
+
     selected.innerText = 'INTERVIEW';
     selected.style.backgroundColor = '#e7f8f2';
-    selected.style.color = '#10b981FF';
+    selected.style.color = '#10b981';
 }
 
 function rejected(id) {
     const selected = document.getElementById(id);
+    const interviewCountElement = document.getElementById('interview-number');
+    const rejectedCountElement = document.getElementById('rejected-number');
+
+    if (selected.innerText === 'REJECTED') {
+        return;
+    }
+
+    if (selected.innerText === 'INTERVIEW') {
+        let interviewNumber = Number(interviewCountElement.innerText);
+        if (interviewNumber > 0) interviewCountElement.innerText = interviewNumber - 1;
+    }
+
+    let rejectedNumber = Number(rejectedCountElement.innerText);
+    rejectedCountElement.innerText = rejectedNumber + 1;
+
     selected.innerText = 'REJECTED';
     selected.style.backgroundColor = '#fef2f2';
-    selected.style.color = '#ef4444FF';
+    selected.style.color = '#ef4444';
 }
+
+
+
+
