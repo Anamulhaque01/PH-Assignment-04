@@ -15,21 +15,21 @@
     </style>
 
 </head>
-<body class="bg-[#F8FAFC]">
-    <main class="container mx-auto py-15">
+<body class="bg-[#f8fafcFF]">
+    <main class="container mx-auto py-5 px-3 md:px-0 md:py-15">
         <!-- Job Tracker -->
         <section class="border-b border-gray-300 pb-8">
-            <h2 class="text-[32px] text-[#002C5C] font-bold">Job Application Tracker</h2>
-            <div class="flex justify-between mt-5">
-                <div class="bg-[#ffffff] p-5 w-[32%] rounded">
+            <h2 class="text-[25px]  md:text-[32px] text-[#002C5C] font-bold">Job Application Tracker</h2>
+            <div class=" md:flex justify-between mt-5 space-y-1">
+                <div class="bg-[#ffffff] p-5 w-full md:w-[32%] rounded border border-gray-200 md:border-gray-100">
                     <p>Total</p>
                     <span class="text-2xl text-[#002C5C] font-bold">8</span>
                 </div>
-                <div class="bg-[#ffffff] p-5 w-[32%] rounded">
+                <div class="bg-[#ffffff] p-5 w-full md:w-[32%] rounded border border-gray-200 md:border-gray-100">
                     <p>Interview</p>
                     <span class="text-2xl text-[#10b981FF] font-bold">0</span>
                 </div>
-                <div class="bg-[#ffffff] p-5 w-[32%] rounded">
+                <div class="bg-[#ffffff] p-5 w-full md:w-[32%] rounded border border-gray-200 md:border-gray-100">
                     <p>Rejected</p>
                     <span class="text-2xl text-[#ef4444FF] font-bold">0</span>
                 </div>
@@ -38,18 +38,36 @@
 
         <!-- Job Section -->
         <section class="mt-5">
-            <h3 class="text-[#002C5C] font-bold text-xl">Available Jobs</h3>
+            <div class="flex justify-between">
+                <h3 class="text-[#002C5C] font-semibold text-xl">Available Jobs</h3>
+                <p class="text-[#64748bFF]">8 jobs</p>
+            </div>
             <div class="space-x-2 mt-3">
-                <button onclick="showSection('all-div'); buttonColor('job-section-btn-1')" class="bg-white rounded px-10 py-3 hover:cursor-pointer hover:bg-gray-100" id="job-section-btn-1">All</button>
+                <button onclick="showSection('all-div'); buttonColor('job-section-btn-1')" class="bg-white text-[#64748bFF] rounded  px-5 md:px-10 py-3 hover:cursor-pointer hover:bg-gray-100 border md:border border-gray-200 md:border-gray-100" id="job-section-btn-1">All</button>
 
-                <button onclick="showSection('interview-div'); buttonColor('job-section-btn-2')" class="bg-white rounded px-10 py-3 hover:cursor-pointer hover:bg-gray-100" id="job-section-btn-2">Interview</button>
+                <button onclick="showSection('interview-div'); buttonColor('job-section-btn-2')" class="bg-white text-[#64748bFF] rounded  px-5 md:px-10 py-3 hover:cursor-pointer hover:bg-gray-100 border md:border border-gray-200 md:border-gray-100" id="job-section-btn-2">Interview</button>
 
-                <button onclick="showSection('rejected-div'); buttonColor('job-section-btn-3')" class="bg-white rounded px-10 py-3 hover:cursor-pointer hover:bg-gray-100" id="job-section-btn-3">Rejected</button>
+                <button onclick="showSection('rejected-div'); buttonColor('job-section-btn-3')" class="bg-white text-[#64748bFF] rounded  px-5 md:px-10 py-3 hover:cursor-pointer hover:bg-gray-100 border md:border border-gray-200 md:border-gray-100" id="job-section-btn-3">Rejected</button>
             </div>
             
-            <div class="bg-gray-300 w-100% h-100 mt-4">
-                <div class="w-100% h-100 bg-red-400 hidden" id="all-div"></div>
+            <div class=" w-100% h-100 mt-4">
+                <div class="w-100% h-100  hidden" id="all-div">
+
+                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100">
+                        <h3 class="text-[#002C5C] font-semibold text-xl">Mobile First Corp</h3>
+                        <p>React Native Developer</p>
+                        <p class="my-3">Remote • Full-time • $130,000 - $175,000</p>
+
+                        <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-1">NOT APPLIED</div>
+                        <p class="my-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <button onclick="interview('not-applied-1')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
+                        <button onclick="rejected('not-applied-1')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                    </div>
+
+                </div>
+
                 <div class="w-100% h-100 bg-yellow-200 hidden" id="interview-div"></div>
+
                 <div class="w-100% h-100 bg-green-400 hidden" id="rejected-div"></div>
             </div>
         </section>
