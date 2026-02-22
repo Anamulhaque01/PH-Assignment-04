@@ -89,6 +89,41 @@ function rejected(id) {
 function deleteJob(id) {
     const selected = document.getElementById(id);
     selected.style.display = 'none';
+
+    const totalCountElement = document.getElementById('total-number');
+    const availableJobsCount = document.getElementById('available-jobs-count');
+
+    let totalNumber = Number(totalCountElement.innerText);
+    newNumber = totalNumber - 1;
+
+    totalCountElement.innerHTML = newNumber;
+    availableJobsCount.innerHTML = newNumber + " jobs";
 }
+
+function allSection(id) {
+    const selected = document.getElementById(id);
+    const totalCountElement = document.getElementById('total-number');
+    let totalNumber = Number(totalCountElement.innerText);
+    selected.innerHTML = totalNumber + " jobs";
+
+}
+
+function interviewSection(id) {
+    const selected = document.getElementById(id);
+    const totalCountElement = document.getElementById('total-number');
+    let totalNumber = Number(totalCountElement.innerText);
+    selected.innerHTML = 0 + " of " + totalNumber + " jobs";
+
+}
+
+function rejectedSection(id) {
+    const selected = document.getElementById(id);
+    const totalCountElement = document.getElementById('total-number');
+    let totalNumber = Number(totalCountElement.innerText);
+    selected.innerHTML = 1 + " of " + totalNumber + " jobs";
+
+}
+
+
 
 

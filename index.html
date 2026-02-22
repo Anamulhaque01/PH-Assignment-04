@@ -23,7 +23,7 @@
             <div class=" md:flex justify-between mt-5 space-y-1">
                 <div class="bg-[#ffffff] p-5 w-full md:w-[32%] rounded border border-gray-200 md:border-gray-100">
                     <p>Total</p>
-                    <span class="text-2xl text-[#002C5C] font-bold">8</span>
+                    <span class="text-2xl text-[#002C5C] font-bold" id="total-number">8</span>
                 </div>
                 <div class="bg-[#ffffff] p-5 w-full md:w-[32%] rounded border border-gray-200 md:border-gray-100">
                     <p>Interview</p>
@@ -40,14 +40,14 @@
         <section class="mt-5">
             <div class="flex justify-between">
                 <h3 class="text-[#002C5C] font-semibold text-xl">Available Jobs</h3>
-                <p class="text-[#64748bFF]">8 jobs</p>
+                <p class="text-[#64748bFF]" id="available-jobs-count">8 jobs</p>
             </div>
             <div class="space-x-2 mt-3">
-                <button onclick="showSection('all-div'); buttonColor('job-section-btn-1')" class="bg-white text-[#64748bFF] rounded  px-5 md:px-10 py-3 hover:cursor-pointer hover:bg-gray-100 border md:border border-gray-200 md:border-gray-100" id="job-section-btn-1">All</button>
+                <button onclick="showSection('all-div'); buttonColor('job-section-btn-1'); allSection('available-jobs-count')" class="bg-white text-[#64748bFF] rounded  px-5 md:px-10 py-3 hover:cursor-pointer hover:bg-gray-100 border md:border border-gray-200 md:border-gray-100" id="job-section-btn-1">All</button>
 
-                <button onclick="showSection('interview-div'); buttonColor('job-section-btn-2')" class="bg-white text-[#64748bFF] rounded  px-5 md:px-10 py-3 hover:cursor-pointer hover:bg-gray-100 border md:border border-gray-200 md:border-gray-100" id="job-section-btn-2">Interview</button>
+                <button onclick="showSection('interview-div'); buttonColor('job-section-btn-2'); interviewSection('available-jobs-count')" class="bg-white text-[#64748bFF] rounded  px-5 md:px-10 py-3 hover:cursor-pointer hover:bg-gray-100 border md:border border-gray-200 md:border-gray-100" id="job-section-btn-2">Interview</button>
 
-                <button onclick="showSection('rejected-div'); buttonColor('job-section-btn-3')" class="bg-white text-[#64748bFF] rounded  px-5 md:px-10 py-3 hover:cursor-pointer hover:bg-gray-100 border md:border border-gray-200 md:border-gray-100" id="job-section-btn-3">Rejected</button>
+                <button onclick="showSection('rejected-div'); buttonColor('job-section-btn-3'); rejectedSection('available-jobs-count')" class="bg-white text-[#64748bFF] rounded  px-5 md:px-10 py-3 hover:cursor-pointer hover:bg-gray-100 border md:border border-gray-200 md:border-gray-100" id="job-section-btn-3">Rejected</button>
             </div>
             
             <div class=" w-100% h-full mt-4">
