@@ -111,16 +111,20 @@ function allSection(id) {
 function interviewSection(id) {
     const selected = document.getElementById(id);
     const totalCountElement = document.getElementById('total-number');
+    const interviewCountElement = document.getElementById('interview-number');
     let totalNumber = Number(totalCountElement.innerText);
-    selected.innerHTML = 0 + " of " + totalNumber + " jobs";
+    interviewNumber = interviewCountElement.innerText;
+    selected.innerHTML = interviewNumber + " of " + totalNumber + " jobs";
 
 }
 
 function rejectedSection(id) {
     const selected = document.getElementById(id);
     const totalCountElement = document.getElementById('total-number');
+    const rejectedCountElement = document.getElementById('rejected-number');
     let totalNumber = Number(totalCountElement.innerText);
-    selected.innerHTML = 1 + " of " + totalNumber + " jobs";
+    rejectedNumber = rejectedCountElement.innerText;
+    selected.innerHTML = rejectedNumber + " of " + totalNumber + " jobs";
 
 }
 

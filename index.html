@@ -12,12 +12,18 @@
         *{
             font-family: "Geist", sans-serif;
         }
+
+        html {
+            overflow-y: scroll;
+        }
     </style>
 
 </head>
 <body class="bg-[#f8fafcFF]">
     <main class="container mx-auto py-5 px-3 md:px-0 md:py-15 ">
-        <!-- Job Tracker -->
+
+        <!------------------------------------------------------------------------- Job Tracker ------------------------------------------------------------------------------>
+        
         <section class="border-b border-gray-300 pb-8">
             <h2 class="text-[25px]  md:text-[32px] text-[#002C5C] font-bold">Job Application Tracker</h2>
             <div class=" md:flex justify-between mt-5 space-y-1">
@@ -36,7 +42,8 @@
             </div>
         </section>
 
-        <!-- Job Section -->
+        <!-------------------------------------------------------------------------- Job Section -------------------------------------------------------------------------------->
+        
         <section class="mt-5">
             <div class="flex justify-between">
                 <h3 class="text-[#002C5C] font-semibold text-xl">Available Jobs</h3>
@@ -49,9 +56,17 @@
 
                 <button onclick="showSection('rejected-div'); buttonColor('job-section-btn-3'); rejectedSection('available-jobs-count')" class="bg-white text-[#64748bFF] rounded  px-5 md:px-10 py-3 hover:cursor-pointer hover:bg-gray-100 border md:border border-gray-200 md:border-gray-100" id="job-section-btn-3">Rejected</button>
             </div>
-            
+
+
+
+            <!-----------------------------------------------------------All Job Section-------------------------------------------------------------------------->
+
+
+
             <div class=" w-100% h-full mt-4">
                 <div class="w-100% h-full  hidden space-y-3" id="all-div">
+
+                    <!---------------------------------------------------- 1st Job ------------------------------------------------------------------------------->
 
                     <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="1st-job">
                         <div>
@@ -69,6 +84,8 @@
                         </div>
                     </div>
 
+                    <!---------------------------------------------------- 2nd Job ------------------------------------------------------------------------------->
+
                     <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="2nd-job">
                         <div>
                             <h3 class="text-[#002C5C] font-semibold text-xl">WebFlow Agency</h3>
@@ -84,6 +101,8 @@
                             <div onclick="deleteJob('2nd-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
                         </div>
                     </div>
+
+                    <!---------------------------------------------------- 3rd Job ------------------------------------------------------------------------------->
 
                     <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="3rd-job">
                         <div>
@@ -101,6 +120,8 @@
                         </div>
                     </div>
 
+                    <!---------------------------------------------------- 4th Job ------------------------------------------------------------------------------->
+
                     <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="4th-job">
                         <div>
                             <h3 class="text-[#002C5C] font-semibold text-xl">CloudFirst Inc</h3>
@@ -116,6 +137,8 @@
                             <div onclick="deleteJob('4th-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
                         </div>
                     </div>
+
+                    <!---------------------------------------------------- 5th Job ------------------------------------------------------------------------------->
 
                     <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="5th-job">
                         <div>
@@ -133,6 +156,8 @@
                         </div>
                     </div>
 
+                    <!---------------------------------------------------- 6th Job ------------------------------------------------------------------------------->
+
                     <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="6th-job">
                         <div>
                             <h3 class="text-[#002C5C] font-semibold text-xl">MegaCorp Solutions</h3>
@@ -149,6 +174,8 @@
                         </div>
                     </div>
 
+                    <!---------------------------------------------------- 7th Job ------------------------------------------------------------------------------->
+
                     <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between " id="7th-job">
                         <div>
                             <h3 class="text-[#002C5C] font-semibold text-xl">StartupXYZ</h3>
@@ -164,6 +191,8 @@
                             <div onclick="deleteJob('7th-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
                         </div>
                     </div>
+
+                    <!---------------------------------------------------- 8th Job ------------------------------------------------------------------------------->
 
                     <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="8th-job">
                         <div>
@@ -183,9 +212,69 @@
 
                 </div>
 
-                <div class="w-100% h-100 bg-yellow-200 hidden" id="interview-div"></div>
 
-                <div class="w-100% h-100 bg-green-400 hidden" id="rejected-div"></div>
+
+                <!----------------------------------------------------  Interview Section ------------------------------------------------------------------------------->
+
+                <div class="w-100%   hidden space-y-3" id="interview-div">
+
+                    <!---------------------------------------------------- NO Job ------------------------------------------------------------------------------->
+
+                    <div class="flex flex-col items-center justify-center bg-white rounded h-120 border-2 border-gray-100" id="no-jobs-available">
+                        <img class="mb-3" src="./assets/img/document.png" alt="">
+                        <h3 class="text-[#002C5C] font-semibold text-2xl">No Jobs available</h3>
+                            <p class="text-[#64748bFF] mt-1">Check back soon for new job opportunities</p>
+                    </div>
+
+                    <!---------------------------------------------------- 1st Job ------------------------------------------------------------------------------->
+
+                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between 1st-job" id="1st-job-1">
+                        <div>
+                            <h3 class="text-[#002C5C] font-semibold text-xl">Mobile First Corp</h3>
+                            <p>React Native Developer</p>
+                            <p class="my-3">Remote • Full-time • $130,000 - $175,000</p>
+
+                            <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-1">NOT APPLIED</div>
+                            <p class="my-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            <button onclick="interview('not-applied-1')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
+                            <button onclick="rejected('not-applied-1')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                        </div>
+                        <div>
+                            <div onclick="deleteJob('1st-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!---------------------------------------------------- Rejected Section ------------------------------------------------------------------------------->
+
+                <div class="w-100% h-100  hidden space-y-3" id="rejected-div">
+
+                    <!---------------------------------------------------- No Job ------------------------------------------------------------------------------->
+                    <div class="flex flex-col items-center justify-center bg-white rounded h-120 border-2 border-gray-100" id="no-jobs-available">
+                        <img class="mb-3" src="./assets/img/document.png" alt="">
+                        <h3 class="text-[#002C5C] font-semibold text-2xl">No Jobs available</h3>
+                            <p class="text-[#64748bFF] mt-1">Check back soon for new job opportunities</p>
+                    </div>
+
+                    <!---------------------------------------------------- 1st Job ------------------------------------------------------------------------------->
+
+                    <div class="bg-white rounded p-7 text-[#64748bFF] border md:border border-gray-200 md:border-gray-100 flex justify-between" id="1st-job">
+                        <div>
+                            <h3 class="text-[#002C5C] font-semibold text-xl">Mobile First Corp</h3>
+                            <p>React Native Developer</p>
+                            <p class="my-3">Remote • Full-time • $130,000 - $175,000</p>
+
+                            <div class="bg-[#eef4ffFF] inline-block p-3 rounded text-[#002C5C] font-medium mt-1.5" id="not-applied-1">NOT APPLIED</div>
+                            <p class="my-2">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            <button onclick="interview('not-applied-1')" class="bg-white inline-block p-3 rounded text-[#10b981FF] font-medium mr-3 mt-3 hover:cursor-pointer border-2 border-[#10b981FF] hover:bg-[#10b981FF] hover:text-white">INTERVIEW</button>
+                            <button onclick="rejected('not-applied-1')" class="bg-white inline-block p-3 rounded text-[#ef4444FF] font-medium border-2 border-[#ef4444FF] hover:cursor-pointer hover:bg-[#ef4444FF] hover:text-white">REJECTED</button>
+                        </div>
+                        <div>
+                            <div onclick="deleteJob('1st-job')" class="border-2 border-gray-100 rounded-full w-10 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-gray-100"><i class="ri-delete-bin-6-line"></i></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         
