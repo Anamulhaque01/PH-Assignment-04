@@ -139,15 +139,3 @@ function changeStatus(theId, theNewStatus) {
     renderJobs();
 }
 
-function removeJob(theId) {
-    let temporaryArray = [];
-    for (let i = 0; i < jobs.length; i++) {
-        if (jobs[i].id !== theId) {
-            temporaryArray.push(jobs[i]);
-        }
-    }
-    jobs = temporaryArray;
-    renderJobs();
-}
-
-renderJobs();
